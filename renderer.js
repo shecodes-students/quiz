@@ -1,19 +1,24 @@
+var uuid = require('uuid');
 var md     = require('markdown-it');
 var Plugin = require('markdown-it-regexp');
 
-var plugin = Plugin(
-  // regexp to match
-  /\[([\sx])\]/,
+function makePlugin(onAnswerOption) {
+	return Plugin(
+	  // regexp to match
+	  /\[([\sx])\]/,
 
-  // this function will be called when something matches
-  function(match, utils) {
-	var checked = match[1] === 'x';
-	return '<input type="checkbox"' + (checked ? ' checked' : '')  + '>';
-  }
-);
+	  // this function will be called when something matches
+	  function(match, utils) {
+		var checked = match[1] === 'x';
+		var id = uuid.v4();
+		onAnswerOption(id, checked);
+		return '<input id="' + id + '" type="checkbox">';
+	  }
+	);
+}
 
-module.exports = function(input) {
+module.exports = function render(input, optionsHandler) {
 	return md()
-		.use(plugin)
+		.use(makePlugin(optionsHandler))
 		.render(input);
 };

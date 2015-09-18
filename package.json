@@ -2,7 +2,7 @@
   "name": "quiz",
   "version": "1.0.0",
   "description": "Put a quiz on your webpage!",
-  "main": "index.js",
+  "main": "renderer.js",
   "scripts": {
     "test": "node test/test.js|tap-spec"
   },
@@ -15,12 +15,15 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "beefy": "^2.1.5",
+    "brfs": "^1.4.1",
+    "browserify": "^11.1.0",
     "tap-spec": "^4.1.0",
     "tape": "^4.2.0"
   },
   "dependencies": {
     "markdown-it": "^4.4.0",
     "markdown-it-regexp": "^0.4.0",
-    "marked": "^0.3.5"
+    "uuid": "^2.0.1"
   }
 }
