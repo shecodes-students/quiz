@@ -25,6 +25,7 @@
     "markdown-it": "^4.4.0",
     "markdown-it-container": "^1.0.0",
     "markdown-it-regexp": "^0.4.0",
+    "stringdom": "^0.2.0",
     "uuid": "^2.0.1"
   }
 }
