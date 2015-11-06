@@ -2,16 +2,14 @@
 
 1. What is the value of the binary number 010 in decimal?
 	- [ ] one
-	- [ ] 100
+	- [x] 2
 	- [ ] 10
 	- [ ] 0.1
 	- [x] two
 
-1. What is the value of the binary number 010 in decimal?
-	- [ ] one
-	- [ ] 100
-	- [ ] 10
-	- [ ] 0.1
-	- [x] two
+1. What is the value of the hex number FF in decimal?
+	- [x] 255
+	- [ ] white
+	- [ ] red
 
 </section>
